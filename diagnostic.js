@@ -39,15 +39,18 @@ const index = () => {};
 // Failure -> Console.error
 
 const show = (id) => {};
-// Success -> Print specified Movement as JSON
+// Success -> If the specified Movement exists, print it as JSON;
+//              otherwise, print "Not Found" and exit.
 // Failure -> Console.error
 
 const update = (id, field, value) => {};
-// Success -> Print updated Movement as JSON
+// Success -> If the specified Movement exists, update it and print the
+//              updated Movement as JSON; otherwise, print "Not Found" and exit.
 // Failure -> Console.error
 
 const destroy = (id) => {};
-// Success -> Print 'removed'
+// Success -> If the specified Movement exists, destroy it and print 'removed';
+//              otherwise, print "Not Found" and exit.
 // Failure -> Console.error
 
 module.exports = {
