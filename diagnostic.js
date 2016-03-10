@@ -1,3 +1,4 @@
+"use strict";
 ////////////////////////
 ///  Art Movements   ///
 ////////////////////////
@@ -48,3 +49,11 @@ const update = (id, field, value) => {};
 const destroy = (id) => {};
 // Success -> Print 'removed'
 // Failure -> Console.error
+
+module.exports = {
+  create,
+  index,
+  show,
+  update,
+  destroy
+}
