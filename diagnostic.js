@@ -28,6 +28,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/mongoose-crud');
 
+const Movement = require('./models/movement.js');
+
 /// ADD YOUR CODE BELOW
 
 const create = (name, description, startYear, endYear) => {};
