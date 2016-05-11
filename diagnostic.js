@@ -21,38 +21,38 @@
 
 // Please implement the CRUD functions below, using Promises to handle the
 //  specified success and failure behaviors.
-// Your Mongoose model should go in a separate file, in the `models` directory.
+// Your Mongoose model has already been created for you in models/movement.js
 
 /// STARTER CODE - DO NOT ALTER!
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/mongoose-crud');
+mongoose.connect('mongodb://localhost/mongoose-crud-diagnostic');
 
 const Movement = require('./models/movement.js');
 
 /// ADD YOUR CODE BELOW
 
 const create = (name, description, startYear, endYear) => {};
-// Success -> Print new Movement as JSON
+// Success -> console.log new Movement as JSON
 // Failure -> Console.error
 
 const index = () => {};
-// Success -> Print all Movements as JSON
+// Success -> console.log all Movements as JSON
 // Failure -> Console.error
 
 const show = (id) => {};
-// Success -> If the specified Movement exists, print it as JSON;
-//              otherwise, print "Not Found" and exit.
+// Success -> If the specified Movement exists, console.log it as JSON;
+//              otherwise, console.log "Not Found" and exit.
 // Failure -> Console.error
 
 const update = (id, field, value) => {};
-// Success -> If the specified Movement exists, update it and print the
-//              updated Movement as JSON; otherwise, print "Not Found" and exit.
+// Success -> If the specified Movement exists, update it and console.log the
+//              updated Movement as JSON; otherwise, console.log "Not Found" and exit.
 // Failure -> Console.error
 
 const destroy = (id) => {};
-// Success -> If the specified Movement exists, destroy it and print 'removed';
-//              otherwise, print "Not Found" and exit.
+// Success -> If the specified Movement exists, destroy it and console.log 'removed';
+//              otherwise, console.log "Not Found" and exit.
 // Failure -> Console.error
 
 module.exports = {
