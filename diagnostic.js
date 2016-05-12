@@ -73,16 +73,15 @@ const index = () => {
 
 
 const show = function(id) {
-  Movement.findById(id, function(req,res){
-    if(!res) {
-      .then(console.log("not found"));
+  Movement.findById(id).then(function (movement) {
+    if(movement) {
+      console.log(movement.toJSON());
     }
     else {
-      .then(function(Movement) {
-      console.log(person.toJSON());
-    })};
-  ).catch(console.error).then(done);
-    };
+      console.log('not found');
+    }
+  }).catch(console.error).then(done);
+};
 
 
 
@@ -105,9 +104,14 @@ const update = function(id, field, value) {
 // Failure -> Console.error
 
 const destroy = function(id) {
-  Person.findById(id).then(function(person) {
-    person.remove();
-    console.log("removed");
+  Movement.findById(id).then(function (movement) {
+    if(movement) {
+      console.log(movement.remove);
+      console.log('removed');
+    }
+    else {
+      console.log('not found');
+    }
   }).catch(console.error).then(done);
 };
 // Success -> If the specified Movement exists, destroy it and console.log 'removed';
